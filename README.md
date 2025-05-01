@@ -1,6 +1,6 @@
 # find telomeres
 
-`find_telomere.py` is a Python script designed to scan a multiFASTA file for telomere repeats at both the left (start) and right (end) of sequences. The script robustly detects telomeric regions—even when multiple candidate regions exist—by searching for all matches and selecting the best candidate based on the length of the repeat.
+`find_telomeres.py` is a Python script designed to scan a multiFASTA file for telomere repeats at both the left (start) and right (end) of sequences. The script robustly detects telomeric regions—even when multiple candidate regions exist—by searching for all matches and selecting the best candidate based on the length of the repeat.
 
 ## Features
 
@@ -23,7 +23,7 @@ Motif does not need to be specified, the default motif is telomeric TTAGGG CCCTA
 
 default:
 ```shell
-./telomere_finder.py input.fasta > telomeres.txt
+./find_telomeres.py input.fasta > telomeres.txt
 ```
 
 for more customization:
@@ -33,7 +33,7 @@ optional arguments
 - `--window`: Number of bases from each sequence end to search (default: 200).
 
 ```shell
-./telomere_finder.py input.fasta --motifs TTAGGG CCCTAA --min_repeats 5 --window 200 > telomeres.txt
+./find_telomeres.py input.fasta --motifs TTAGGG CCCTAA --min_repeats 5 --window 200 > telomeres.txt
 ```
 
 
